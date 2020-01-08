@@ -1,6 +1,6 @@
 {
   "name": "react-seed",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -24,7 +24,8 @@
   },
   "jest": {
     "testMatch": [
-      "**/__tests__/**/*.test.js"
+      "**/__tests__/**/*.test.js",
+      "**/__tests__/**/*.spec.js"
     ],
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom/extend-expect"
