@@ -10,7 +10,7 @@
   "lint-staged": {
     "**/*.js": [
       "eslint src --fix",
-      "yarn test --findRelatedTests",
+      "cross-env CI=true yarn test --bail --findRelatedTests",
       "git add"
     ]
   },
@@ -61,6 +61,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.25",
     "babel-plugin-root-import": "^6.4.1",
+    "cross-env": "^6.0.3",
     "customize-cra": "^0.9.1",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
