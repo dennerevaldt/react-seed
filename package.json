@@ -2,6 +2,17 @@
   "name": "react-seed",
   "version": "1.0.0",
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "eslint src --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -58,6 +69,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.0.1",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "react-app-rewired": "^2.1.5"
   }
