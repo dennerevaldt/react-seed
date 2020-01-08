@@ -17,13 +17,6 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', 'prettier'],
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    },
-  },
   rules: {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
