@@ -22,9 +22,6 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "jest": {
     "testMatch": [
       "**/__tests__/**/*.test.js"
