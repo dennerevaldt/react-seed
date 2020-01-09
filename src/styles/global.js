@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  @import url('${({ theme }) => theme.googleFontUrl}');
   * {
     margin: 0;
     padding: 0;
@@ -9,15 +9,20 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   html, body, #root {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: center;
+    align-items: center;
   }
   body {
-    background-color: #FFFFFF;
+    background-color: ${({ theme }) => theme.colors.white};;
     -webkit-font-smoothing: antialiased !important;
   }
   body, input, button {
-    color: #FFFFFF;
-    font-size: 14px;
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: ${({ theme }) => theme.colors.black};
+    font-size: ${({ theme }) => theme.fontSizes.small};
+    font-family: ${({ theme }) => theme.fonts.join(',')};
+    font-weight: ${({ theme }) => theme.fontWeigth};
   }
 `;
